@@ -1,0 +1,783 @@
+[
+    {
+        "id": "ad24c5d049e8d10d",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "6f702b730fd5244d",
+        "type": "ui-group",
+        "name": "Local",
+        "page": "667f0dfb8d9bd474",
+        "width": 6,
+        "height": 1,
+        "order": 3,
+        "showTitle": false,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "8b4aa69d37a76fe3",
+        "type": "ads-client-connection",
+        "name": "TestConnection",
+        "targetAmsNetId": "5.146.238.231.1.1",
+        "targetAdsPort": "853",
+        "objectifyEnumerations": true,
+        "convertDatesToJavascript": true,
+        "readAndCacheSymbols": false,
+        "readAndCacheDataTypes": false,
+        "disableSymbolVersionMonitoring": false,
+        "routerTcpPort": "",
+        "routerAddress": "",
+        "localAddress": "",
+        "localTcpPort": "",
+        "localAmsNetId": "",
+        "localAdsPort": "",
+        "timeoutDelay": "",
+        "hideConsoleWarnings": false,
+        "autoReconnect": true,
+        "reconnectInterval": "",
+        "checkStateInterval": "",
+        "connectionDownDelay": "",
+        "allowHalfOpen": false,
+        "disableBigInt": false,
+        "debuggingLevel": "",
+        "bareClient": false
+    },
+    {
+        "id": "87c3ff341cb648d9",
+        "type": "ui-base",
+        "name": "Gateway Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "fixed",
+        "titleBarStyle": "hidden",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true
+    },
+    {
+        "id": "667f0dfb8d9bd474",
+        "type": "ui-page",
+        "name": "Local",
+        "ui": "87c3ff341cb648d9",
+        "path": "/ALocal",
+        "icon": "arrow-up-down",
+        "layout": "grid",
+        "theme": "be38d4fca978e072",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 2,
+        "className": "",
+        "visible": true,
+        "disabled": false
+    },
+    {
+        "id": "be38d4fca978e072",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#292929",
+            "primary": "#004ecc",
+            "bgPage": "#2e2e2e",
+            "groupBg": "#383838",
+            "groupOutline": "#000000"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "8abd4ae185042d77",
+        "type": "ui-led",
+        "z": "ad24c5d049e8d10d",
+        "name": "Ultimate Up",
+        "group": "6f702b730fd5244d",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Ultimate Up",
+        "labelPlacement": "left",
+        "labelAlignment": "flex-start",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#ff0000"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#00ff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 1270,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "5d50e9574532750c",
+        "type": "ui-led",
+        "z": "ad24c5d049e8d10d",
+        "name": "Ultimate Down",
+        "group": "6f702b730fd5244d",
+        "order": 14,
+        "width": 0,
+        "height": 0,
+        "label": "Ultimate Down",
+        "labelPlacement": "left",
+        "labelAlignment": "flex-start",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#ff0000"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#00ff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 1280,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "58c42e6cf7991ac2",
+        "type": "ui-led",
+        "z": "ad24c5d049e8d10d",
+        "name": "Initial Up",
+        "group": "6f702b730fd5244d",
+        "order": 19,
+        "width": 0,
+        "height": 0,
+        "label": "Initial Up",
+        "labelPlacement": "left",
+        "labelAlignment": "flex-start",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#ff0000"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#00ff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 1260,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "02405dc40a8af620",
+        "type": "ui-led",
+        "z": "ad24c5d049e8d10d",
+        "name": "Initial Down",
+        "group": "6f702b730fd5244d",
+        "order": 20,
+        "width": 0,
+        "height": 0,
+        "label": "Initial Down",
+        "labelPlacement": "left",
+        "labelAlignment": "flex-start",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#ff0000"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#00ff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 1270,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "c44f9a45b33b4758",
+        "type": "ui-led",
+        "z": "ad24c5d049e8d10d",
+        "name": "Cross Groove",
+        "group": "6f702b730fd5244d",
+        "order": 21,
+        "width": 0,
+        "height": 0,
+        "label": "Cross Groove",
+        "labelPlacement": "left",
+        "labelAlignment": "flex-start",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#ff0000"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#00ff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 1280,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "3d093ce2e9611289",
+        "type": "ui-led",
+        "z": "ad24c5d049e8d10d",
+        "name": "Encoder Difference",
+        "group": "6f702b730fd5244d",
+        "order": 22,
+        "width": 0,
+        "height": 0,
+        "label": "Encoder Difference",
+        "labelPlacement": "left",
+        "labelAlignment": "flex-start",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#ff0000"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#00ff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 1110,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "1851bfacff5d8b9b",
+        "type": "ui-led",
+        "z": "ad24c5d049e8d10d",
+        "name": "In Local",
+        "group": "6f702b730fd5244d",
+        "order": 15,
+        "width": 0,
+        "height": 0,
+        "label": "In Local",
+        "labelPlacement": "left",
+        "labelAlignment": "flex-start",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#ff0000"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#00ff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 1260,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "d4f5c3d349c03dae",
+        "type": "ui-led",
+        "z": "ad24c5d049e8d10d",
+        "name": "In Auto",
+        "group": "6f702b730fd5244d",
+        "order": 16,
+        "width": 0,
+        "height": 0,
+        "label": "In Auto",
+        "labelPlacement": "left",
+        "labelAlignment": "flex-start",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#ff0000"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#00ff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 1260,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "40a79a1e3753e4f5",
+        "type": "ui-led",
+        "z": "ad24c5d049e8d10d",
+        "name": "Temperature Warn",
+        "group": "6f702b730fd5244d",
+        "order": 17,
+        "width": 0,
+        "height": 0,
+        "label": "Temperature Warn",
+        "labelPlacement": "left",
+        "labelAlignment": "flex-start",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#ff0000"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#00ff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 1110,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "98d78355c4f62a7a",
+        "type": "ui-led",
+        "z": "ad24c5d049e8d10d",
+        "name": "Temperature Alarm",
+        "group": "6f702b730fd5244d",
+        "order": 18,
+        "width": 0,
+        "height": 0,
+        "label": "Temperature Alarm",
+        "labelPlacement": "left",
+        "labelAlignment": "flex-start",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#ff0000"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#00ff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 1290,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "dc8889d618c90768",
+        "type": "ui-led",
+        "z": "ad24c5d049e8d10d",
+        "name": "Safe Speed Fault",
+        "group": "6f702b730fd5244d",
+        "order": 28,
+        "width": 0,
+        "height": 0,
+        "label": "Safe Speed Fault",
+        "labelPlacement": "left",
+        "labelAlignment": "flex-start",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#ff0000"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#00ff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 1110,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "49d6a1bd5dcf2ec6",
+        "type": "ui-led",
+        "z": "ad24c5d049e8d10d",
+        "name": "Brake Wear Alarm",
+        "group": "6f702b730fd5244d",
+        "order": 23,
+        "width": 0,
+        "height": 0,
+        "label": "Brake Wear Alarm",
+        "labelPlacement": "left",
+        "labelAlignment": "flex-start",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#ff0000"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#00ff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 1110,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "8572d2593b8b302e",
+        "type": "ui-led",
+        "z": "ad24c5d049e8d10d",
+        "name": "Gross Overload",
+        "group": "6f702b730fd5244d",
+        "order": 24,
+        "width": 0,
+        "height": 0,
+        "label": "Gross Overload",
+        "labelPlacement": "left",
+        "labelAlignment": "flex-start",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#ff0000"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#00ff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 1100,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "1b86e18f6557a5ce",
+        "type": "ui-led",
+        "z": "ad24c5d049e8d10d",
+        "name": "Dynamic Overload",
+        "group": "6f702b730fd5244d",
+        "order": 25,
+        "width": 0,
+        "height": 0,
+        "label": "Dynamic Overload",
+        "labelPlacement": "left",
+        "labelAlignment": "flex-start",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#ff0000"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#00ff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 1110,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "8d61f556e6bd8214",
+        "type": "ui-led",
+        "z": "ad24c5d049e8d10d",
+        "name": "Safe Speed Active",
+        "group": "6f702b730fd5244d",
+        "order": 26,
+        "width": 0,
+        "height": 0,
+        "label": "Safe Speed Active",
+        "labelPlacement": "left",
+        "labelAlignment": "flex-start",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#ff0000"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#00ff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 1110,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "419a70696ad3631f",
+        "type": "ui-led",
+        "z": "ad24c5d049e8d10d",
+        "name": "Axis Safety",
+        "group": "6f702b730fd5244d",
+        "order": 27,
+        "width": 0,
+        "height": 0,
+        "label": "Axis Safety",
+        "labelPlacement": "left",
+        "labelAlignment": "flex-start",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#ff0000"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#00ff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 1090,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "e3f7705be962c702",
+        "type": "ads-client-read-symbol",
+        "z": "ad24c5d049e8d10d",
+        "name": "",
+        "connection": "8b4aa69d37a76fe3",
+        "variableName": "GVL.MotorAxisCoordinators[1].ToCor.AxisIO[0]",
+        "x": 670,
+        "y": 1140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "29c72f932d0aa3da",
+        "type": "ads-client-connection-status",
+        "z": "ad24c5d049e8d10d",
+        "name": "",
+        "connection": "8b4aa69d37a76fe3",
+        "showInput": false,
+        "inputs": 0,
+        "x": 240,
+        "y": 960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "103e619a69aa9809",
+        "type": "inject",
+        "z": "ad24c5d049e8d10d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 900,
+        "wires": [
+            [
+                "20824d415d6294c9"
+            ]
+        ]
+    },
+    {
+        "id": "20824d415d6294c9",
+        "type": "ads-client-read-symbol",
+        "z": "ad24c5d049e8d10d",
+        "name": "",
+        "connection": "8b4aa69d37a76fe3",
+        "variableName": "Main.Counter",
+        "x": 520,
+        "y": 940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "64e9f6beefee9d19",
+        "type": "function",
+        "z": "ad24c5d049e8d10d",
+        "name": "Decode Uint to Bool",
+        "func": "    // Extract payload\n    const uint = msg.payload;\n\n    // Validate input\n    if (!Number.isInteger(uint) || uint < 0) {\n        msg.error = 'Input must be a non-negative integer';\n        return [msg];\n    }\n\n    // Create boolean array for 16 least significant bits\n    const boolArray = new Array(16).fill(false).map((_, index) => \n        Boolean((uint >> index) & 1)\n    ).reverse();\n\n    // Create output messages for each bit\n    const outputs = boolArray.map((boolValue, index) => {\n        const outputMsg = JSON.parse(JSON.stringify(msg));\n        outputMsg.payload = boolValue;\n        outputMsg.index = index;\n        return outputMsg;\n    });\n\n    // Return the array of output messages\n    return outputs;\n",
+        "outputs": 16,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 480,
+        "wires": [
+            [
+                "419a70696ad3631f"
+            ],
+            [
+                "8d61f556e6bd8214"
+            ],
+            [
+                "3d093ce2e9611289"
+            ],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "c8dec1280b3ddb38",
+        "type": "ui-control",
+        "z": "ad24c5d049e8d10d",
+        "name": "",
+        "ui": "87c3ff341cb648d9",
+        "events": "all",
+        "x": 180,
+        "y": 1120,
+        "wires": [
+            [
+                "e3f7705be962c702"
+            ]
+        ]
+    },
+    {
+        "id": "bc077a114947ed26",
+        "type": "ads-client-subscribe",
+        "z": "ad24c5d049e8d10d",
+        "name": "IO Collection",
+        "connection": "8b4aa69d37a76fe3",
+        "variableName": "GVL.MotorAxisCoordinators[1].ToCor.AxisIO[0]",
+        "cycleTime": 200,
+        "mode": "onchange",
+        "initialDelay": 0,
+        "retryInterval": 2000,
+        "controlSubscription": false,
+        "resubscribeTimeout": 2000,
+        "inputs": 0,
+        "x": 230,
+        "y": 480,
+        "wires": [
+            [
+                "64e9f6beefee9d19"
+            ]
+        ]
+    }
+]
