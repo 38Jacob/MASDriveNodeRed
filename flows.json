@@ -24,7 +24,7 @@
     {
         "id": "8b4aa69d37a76fe3",
         "type": "ads-client-connection",
-        "name": "TestConnection",
+        "name": "Coordinator",
         "targetAmsNetId": "192.168.10.4.1.1",
         "targetAdsPort": "852",
         "objectifyEnumerations": true,
@@ -141,7 +141,7 @@
     {
         "id": "f304f873e5205f73",
         "type": "ads-client-connection",
-        "name": "Config",
+        "name": "SystemInterface",
         "targetAmsNetId": "192.168.10.4.1.1",
         "targetAdsPort": "853",
         "objectifyEnumerations": true,
@@ -769,14 +769,18 @@
         "head": "",
         "format": "<template>\n    <v-row class=\"align-center my-2\" no-gutters>\n        <v-col cols=\"4\" >\n            <label class=\"nrdb-ui-text--row-spread\">Position:</label>\n        </v-col>\n            \n        <v-col cols=\"2\" class=\"d-flex justify-center\">\n            <span>{{value}}</span>\n        </v-col>\n\n        <v-col cols=\"4\">\n            <v-text-field\n            v-model=\"newValue\"\n            density=\"compact\"\n            hide-details\n            label=\"New Value\"\n            variant=\"outlined\"\n            ></v-text-field>\n        </v-col>\n\n        <v-col cols=\"2\" class=\"d-flex justify-center\">\n            <v-btn color=\"primary\" @click=\"save()\">Save</v-btn>\n        </v-col>\n\n    </v-row>\n</template>\n\n<script>\n\n    export default {\n        data() {\n            // define variables available component-wide\n            // (in <template> and component functions)\n            return {\n                count: 0,\n                newValue : '',\n                value: null\n            }\n        },\n        watch: {\n            msg: function () {\n            // do stuff with this.msg\n            // runs onLoad and onInput\n                this.value = this.msg.payload;\n            }\n        },\n        computed: {\n            // automatically compute this variable\n            // whenever VueJS deems appropriate\n            formattedCount: function () {\n                return this.count + ' Apples'\n            }\n        },\n        methods: {\n            // expose a method to our <template> and Vue Application\n            save: function () {\n                this.send({payload: this.newValue})\n                this.value = this.newValue;\n            }\n        },\n        mounted() {\n            // code here when the component is first loaded\n        },\n        unmounted() {\n            // code here when the component is removed from the Dashboard\n            // i.e. when the user navigates away from the page\n        }\n    }\n</script>\n\n<style>\n</style>",
         "storeOutMessages": true,
-        "passthru": true,
+        "passthru": false,
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
         "x": 860,
         "y": 700,
         "wires": [
-            []
+            [
+                "f4d7c379b2e79e52",
+                "0be0894a8841ccda",
+                "05469e1b29d5efc0"
+            ]
         ]
     },
     {
@@ -793,14 +797,16 @@
         "head": "",
         "format": "<template>\n    <v-row class=\"align-center my-2\" no-gutters>\n        <v-col cols=\"4\" >\n            <label class=\"nrdb-ui-text--row-spread\">Load Cell Scale Up:</label>\n        </v-col>\n            \n        <v-col cols=\"2\" class=\"d-flex justify-center\">\n            <span>{{value}}</span>\n        </v-col>\n\n        <v-col cols=\"4\">\n            <v-text-field\n            v-model=\"newValue\"\n            density=\"compact\"\n            hide-details\n            label=\"New Value\"\n            variant=\"outlined\"\n            ></v-text-field>\n        </v-col>\n\n        <v-col cols=\"2\" class=\"d-flex justify-center\">\n            <v-btn color=\"primary\" @click=\"save()\">Save</v-btn>\n        </v-col>\n\n    </v-row>\n</template>\n\n<script>\n\n    export default {\n        data() {\n            // define variables available component-wide\n            // (in <template> and component functions)\n            return {\n                count: 0,\n                newValue : '',\n                value: null\n            }\n        },\n        watch: {\n            msg: function () {\n            // do stuff with this.msg\n            // runs onLoad and onInput\n                this.value = this.msg.payload;\n            }\n        },\n        computed: {\n            // automatically compute this variable\n            // whenever VueJS deems appropriate\n            formattedCount: function () {\n                return this.count + ' Apples'\n            }\n        },\n        methods: {\n            // expose a method to our <template> and Vue Application\n            save: function () {\n                this.send({payload: this.newValue})\n                this.value = this.newValue;\n            }\n        },\n        mounted() {\n            // code here when the component is first loaded\n        },\n        unmounted() {\n            // code here when the component is removed from the Dashboard\n            // i.e. when the user navigates away from the page\n        }\n    }\n</script>\n\n<style>\n</style>",
         "storeOutMessages": true,
-        "passthru": true,
+        "passthru": false,
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
         "x": 890,
         "y": 940,
         "wires": [
-            []
+            [
+                "4b6139cee6c39bdc"
+            ]
         ]
     },
     {
@@ -817,14 +823,17 @@
         "head": "",
         "format": "<template>\n    <v-row class=\"align-center my-2\" no-gutters>\n        <v-col cols=\"4\" >\n            <label class=\"nrdb-ui-text--row-spread\">Load Cell Scale Down:</label>\n        </v-col>\n            \n        <v-col cols=\"2\" class=\"d-flex justify-center\">\n            <span>{{value}}</span>\n        </v-col>\n\n        <v-col cols=\"4\">\n            <v-text-field\n            v-model=\"newValue\"\n            density=\"compact\"\n            hide-details\n            label=\"New Value\"\n            variant=\"outlined\"\n            ></v-text-field>\n        </v-col>\n\n        <v-col cols=\"2\" class=\"d-flex justify-center\">\n            <v-btn color=\"primary\" @click=\"save()\">Save</v-btn>\n        </v-col>\n\n    </v-row>\n</template>\n\n<script>\n\n    export default {\n        data() {\n            // define variables available component-wide\n            // (in <template> and component functions)\n            return {\n                count: 0,\n                newValue : '',\n                value: null\n            }\n        },\n        watch: {\n            msg: function () {\n            // do stuff with this.msg\n            // runs onLoad and onInput\n                this.value = this.msg.payload;\n            }\n        },\n        computed: {\n            // automatically compute this variable\n            // whenever VueJS deems appropriate\n            formattedCount: function () {\n                return this.count + ' Apples'\n            }\n        },\n        methods: {\n            // expose a method to our <template> and Vue Application\n            save: function () {\n                this.send({payload: this.newValue})\n                this.value = this.newValue;\n            }\n        },\n        mounted() {\n            // code here when the component is first loaded\n        },\n        unmounted() {\n            // code here when the component is removed from the Dashboard\n            // i.e. when the user navigates away from the page\n        }\n    }\n</script>\n\n<style>\n</style>",
         "storeOutMessages": true,
-        "passthru": true,
+        "passthru": false,
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
         "x": 900,
         "y": 980,
         "wires": [
-            []
+            [
+                "2ecffa03d9be3dbe",
+                "4e8d7741032d736f"
+            ]
         ]
     },
     {
@@ -841,14 +850,17 @@
         "head": "",
         "format": "<template>\n    <v-row class=\"align-center my-2\" no-gutters>\n        <v-col cols=\"4\" >\n            <label class=\"nrdb-ui-text--row-spread\">Up Direction:</label>\n        </v-col>\n            \n        <v-col cols=\"2\" class=\"d-flex justify-center\" >\n            <span>{{value}}</span>\n        </v-col>\n\n        <v-col cols=\"4\" >\n            <v-select\n            v-model=\"newValue\"\n            :items=\"booleanOptions\"\n            item-title=\"title\"\n            item-value=\"value\"\n            label=\"New Value\"\n            variant=\"outlined\"\n            dense\n            hide-details\n            />\n        </v-col>\n\n        <v-col cols=\"2\" class=\"d-flex justify-center\">\n            <v-btn color=\"primary\" @click=\"save()\">Save</v-btn>\n        </v-col>\n\n    </v-row>\n</template>\n\n<script>\n\n    export default {\n        data() {\n            // define variables available component-wide\n            // (in <template> and component functions)\n            return {\n                count: 0,\n                newValue : '',\n                value: null,\n                booleanOptions: [\n                { title: 'True', value: true },\n                { title: 'False', value: false }\n                ]\n            }\n        },\n        watch: {\n            msg: function () {\n            // do stuff with this.msg\n            // runs onLoad and onInput\n                this.value = this.msg.payload;\n            }\n        },\n        computed: {\n            // automatically compute this variable\n            // whenever VueJS deems appropriate\n        },\n        methods: {\n            // expose a method to our <template> and Vue Application\n            save: function () {\n                this.send({payload: this.newValue})\n                //this.value = this.newValue;\n            }\n        },\n        mounted() {\n            // code here when the component is first loaded\n        },\n        unmounted() {\n            // code here when the component is removed from the Dashboard\n            // i.e. when the user navigates away from the page\n        }\n    }\n</script>\n\n<style>\n    .select{\n        margin : 4px;\n    }\n</style>",
         "storeOutMessages": true,
-        "passthru": true,
+        "passthru": false,
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
         "x": 870,
         "y": 1020,
         "wires": [
-            []
+            [
+                "99be15defd76b627",
+                "7a3b974f9f748272"
+            ]
         ]
     },
     {
@@ -865,7 +877,7 @@
         "head": "",
         "format": "<template>\n    <v-row class=\"align-center my-2\" no-gutters>\n        <v-col cols=\"4\" >\n            <label class=\"nrdb-ui-text--row-spread\">Velocity:</label>\n        </v-col>\n            \n        <v-col cols=\"2\" class=\"d-flex justify-center\">\n            <span>{{value}}</span>\n        </v-col>\n\n        <v-col cols=\"4\">\n\n        </v-col>\n\n        <v-col cols=\"2\" class=\"d-flex justify-center\">\n            \n        </v-col>\n\n    </v-row>\n</template>\n\n<script>\n\n    export default {\n        data() {\n            // define variables available component-wide\n            // (in <template> and component functions)\n            return {\n                count: 0,\n                newValue : '',\n                value: null\n            }\n        },\n        watch: {\n            msg: function () {\n            // do stuff with this.msg\n            // runs onLoad and onInput\n                this.value = this.msg.payload;\n            }\n        },\n        computed: {\n            // automatically compute this variable\n            // whenever VueJS deems appropriate\n            formattedCount: function () {\n                return this.count + ' Apples'\n            }\n        },\n        methods: {\n            // expose a method to our <template> and Vue Application\n            save: function () {\n                this.send({payload: this.newValue})\n                this.value = this.newValue;\n            }\n        },\n        mounted() {\n            // code here when the component is first loaded\n        },\n        unmounted() {\n            // code here when the component is removed from the Dashboard\n            // i.e. when the user navigates away from the page\n        }\n    }\n</script>\n\n<style>\n</style>",
         "storeOutMessages": true,
-        "passthru": true,
+        "passthru": false,
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
@@ -1033,7 +1045,7 @@
         "y": 1020,
         "wires": [
             [
-                "d031a694cc174235"
+                "2485307ad7776fb9"
             ]
         ]
     },
@@ -1246,26 +1258,6 @@
         ]
     },
     {
-        "id": "d031a694cc174235",
-        "type": "function",
-        "z": "ad24c5d049e8d10d",
-        "name": "Round to 2",
-        "func": "msg.payload = Number(msg.payload.toFixed(2))\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 710,
-        "y": 1020,
-        "wires": [
-            [
-                "2485307ad7776fb9"
-            ]
-        ]
-    },
-    {
         "id": "a7a2ac57144565a7",
         "type": "function",
         "z": "ad24c5d049e8d10d",
@@ -1345,13 +1337,54 @@
         "y": 860,
         "wires": [
             [
-                "a7a2ac57144565a7",
-                "e0f1cf1818ed9c0e"
+                "a7a2ac57144565a7"
             ]
         ]
     },
     {
-        "id": "e0f1cf1818ed9c0e",
+        "id": "4b6139cee6c39bdc",
+        "type": "ads-client-write-symbol",
+        "z": "ad24c5d049e8d10d",
+        "name": "ConfigParameters.AxisParamsActive[1].LoadCellScaleUp",
+        "connection": "f304f873e5205f73",
+        "variableName": "ConfigParameters.AxisParamsActive[1].LoadCellScaleUp",
+        "autoFill": false,
+        "x": 1230,
+        "y": 940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2ecffa03d9be3dbe",
+        "type": "ads-client-write-symbol",
+        "z": "ad24c5d049e8d10d",
+        "name": "ConfigParameters.AxisParamsActive[1].LoadCellScaleDown",
+        "connection": "f304f873e5205f73",
+        "variableName": "ConfigParameters.AxisParamsActive[1].LoadCellScaleDown",
+        "autoFill": false,
+        "x": 1240,
+        "y": 980,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "99be15defd76b627",
+        "type": "ads-client-write-symbol",
+        "z": "ad24c5d049e8d10d",
+        "name": "ConfigParameters.AxisParamsActive[1].UpDirection",
+        "connection": "f304f873e5205f73",
+        "variableName": "ConfigParameters.AxisParamsActive[1].UpDirection",
+        "autoFill": false,
+        "x": 1150,
+        "y": 1020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7a3b974f9f748272",
         "type": "debug",
         "z": "ad24c5d049e8d10d",
         "name": "debug 1",
@@ -1362,8 +1395,188 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1100,
-        "y": 760,
+        "x": 1540,
+        "y": 1040,
         "wires": []
+    },
+    {
+        "id": "4e8d7741032d736f",
+        "type": "debug",
+        "z": "ad24c5d049e8d10d",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1540,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "f4d7c379b2e79e52",
+        "type": "debug",
+        "z": "ad24c5d049e8d10d",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1020,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "0be0894a8841ccda",
+        "type": "ads-client-write-symbol",
+        "z": "ad24c5d049e8d10d",
+        "name": "SystemInterfaceData.FromAxisIntData[1].SetPosition",
+        "connection": "f304f873e5205f73",
+        "variableName": "SystemInterfaceData.FromAxisIntData[1].SetPosition",
+        "autoFill": false,
+        "x": 1160,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "857dd33736e1a8ab",
+        "type": "ads-client-write-symbol",
+        "z": "ad24c5d049e8d10d",
+        "name": "SystemInterfaceData.FromAxisIntData[1].SetPos",
+        "connection": "f304f873e5205f73",
+        "variableName": "SystemInterfaceData.FromAxisIntData[1].SetPos",
+        "autoFill": false,
+        "x": 1500,
+        "y": 740,
+        "wires": [
+            [
+                "1097d0d522b97e22"
+            ]
+        ]
+    },
+    {
+        "id": "05469e1b29d5efc0",
+        "type": "delay",
+        "z": "ad24c5d049e8d10d",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "250",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1050,
+        "y": 740,
+        "wires": [
+            [
+                "8859dc9c4262d6d0"
+            ]
+        ]
+    },
+    {
+        "id": "8859dc9c4262d6d0",
+        "type": "change",
+        "z": "ad24c5d049e8d10d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1220,
+        "y": 740,
+        "wires": [
+            [
+                "857dd33736e1a8ab"
+            ]
+        ]
+    },
+    {
+        "id": "48d2dd8185c90705",
+        "type": "ads-client-write-symbol",
+        "z": "ad24c5d049e8d10d",
+        "name": "SystemInterfaceData.FromAxisIntData[1].SetPos",
+        "connection": "f304f873e5205f73",
+        "variableName": "SystemInterfaceData.FromAxisIntData[1].SetPos",
+        "autoFill": false,
+        "x": 2220,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1097d0d522b97e22",
+        "type": "delay",
+        "z": "ad24c5d049e8d10d",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "250",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1770,
+        "y": 740,
+        "wires": [
+            [
+                "061c454cc7f750ad"
+            ]
+        ]
+    },
+    {
+        "id": "061c454cc7f750ad",
+        "type": "change",
+        "z": "ad24c5d049e8d10d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1940,
+        "y": 740,
+        "wires": [
+            [
+                "48d2dd8185c90705"
+            ]
+        ]
     }
 ]
